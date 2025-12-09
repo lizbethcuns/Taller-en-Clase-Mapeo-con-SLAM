@@ -13,4 +13,11 @@ ros2 launch turtlebot4_navigation slam.launch.py sync:=false
 Lanzar RVIZ
 ros2 launch turtlebot4_viz view_robot.launch.py
 
+MOVER DESDE EL TERMINAL
 ros2 topic pub /cmd_vel geometry_msgs/Twist '{linear: {x: 0.7 , y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}'
+
+# ------------------- ENTENDER ros2 topic pub /cmd_vel geometry_msgs/msg/Twist '{linear: {x: 0.7, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}' --rate 10 --------------------------------
+#x: 0.7 ------------- avanza hacia adelante a 0.7 metros por segundo (m/s)
+#y: 0.0 y z: 0.0 evitan movimiento lateral o vertical (el robot es 2D
+#(angular): Controla la rotación. Aquí todo es 0, así que no gira
+#--rate 10: Envía el comando 10 veces por segundo (10 Hz)
